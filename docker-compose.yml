@@ -2,16 +2,12 @@ version: '3.3'
 
 services:
   database:
-    image: postgres:13
+    image: postgres
     environment:
-      - POSTGRES_DB=user
+      - POSTGRES_DB=gestion_usuario
       - POSTGRES_USER=yuver
       - POSTGRES_PASSWORD=postgres
     ports:
       - '5432:5432'
-    volumes:
-      - /postgres_data:/var/lib/postgresql/data  # Cambié el nombre del volumen para que coincida con el volumen utilizado
-volumes:
-  postgres_data:
-    external: true
+    
 
